@@ -2,8 +2,8 @@
 
 ##Checklist
 -[x] Calculate the average.
--[ ] Calculate the IMC 
--[ ] Calculate the leap year 
+-[x] Calculate the IMC 
+-[x] Calculate the leap year 
 -[ ] Count the days in a month and in a year
 -[ ] Count the days before the giving date
 

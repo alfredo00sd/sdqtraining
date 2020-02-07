@@ -11,13 +11,29 @@ public class IMC extends Console {
      * */
     public static void main(String[] args) {
 
+        double peso;
+        double altura;
+        double IMC;
+
         formattedMsg("Indique su peso(kg)",true);
-        double peso = SCANNER.nextDouble();
+        peso = SCANNER.nextDouble();
 
         formattedMsg("Indique su altura(m)",true);
-        double altura = SCANNER.nextDouble();
+        altura = SCANNER.nextDouble();
 
-        System.out.println(DECIMAL.format(peso/(altura*altura)) );
+        IMC = peso/(altura*altura);
+
+        System.out.println("Su IMC corresponde a: "+ DECIMAL.format(IMC));
+        System.out.println("");
+
+        if (IMC<18.5) {
+            System.out.println("BAJO PESO");
+        } else if (IMC>=18.5 && IMC<=24.9) {
+            System.out.println("NORMAL");
+        } else if (IMC>=25 && IMC<=29.9) {
+            System.out.println("SOBREPESO");
+        } else {
+            System.out.println("OBESIDAD");
+        }
     }
-
 }
