@@ -4,9 +4,15 @@ public class Sistema {
 	
 	public static void main(String[] args){
 	
-		runFor();
-		runWhile();
-		runDoWhile();
+//		runFor();
+//		runWhile();
+//		runDoWhile();
+		
+		int total = 0;
+		for(int i = 0; i <=12;i++){
+			total += i;
+		}
+		System.out.print(total);
 	}
 	
 	private static void runFor(){
@@ -84,5 +90,9 @@ public class Sistema {
 		
 		System.out.println("***************** Endinng while loop *******************");
 	
+	}
+	
+	private static void msj(String loop){
+		
 	}
 }
