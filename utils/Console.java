@@ -34,4 +34,5 @@ public class Console {
             System.out.println(ANSI_RED + ">>>>>>>>>>>>> "+str+" <<<<<<<<<<<<<<<<");
         }
     }
+
 }
