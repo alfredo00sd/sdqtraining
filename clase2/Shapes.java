@@ -4,9 +4,42 @@ import java.util.Scanner;
 
 public class Shapes {
 
+    private static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        System.out.println("Tell me the size of the shape.");
+
+        int initialSize = sc.nextInt();
+
+//        printTopLeftCorner(initialSize);
+        printBottomLeftCorner(initialSize);
+    }
+
+
+    private static void printBottomLeftCorner(int initialSize){
+
+        for (int i = 1; i <= initialSize; i++){
+
+            for (int k = i; k > 1; k--){
+                System.out.print("*");
+            }
+            System.out.println("*");
+        }
+    }
+
+    private static void printTopLeftCorner(int initialSize){
+
+        for (int i = initialSize; i >= 1; i-- ){
+
+            for (int k = 1; k < i; k++){
+                System.out.print("*");
+            }
+            System.out.println("*");
+        }
+    }
+
+    private static void printCustomShape(){
         int size;
         Character c;
         System.out.println("Enter height of the triangle : ");
