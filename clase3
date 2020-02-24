@@ -1,7 +1,0 @@
-TO-DO
-
-0. Crear archivo con nombre, apellido y edad.
-1. Agregar contendido en un archivo...
-2. Metodo recibe string e imprime los caracteres pares y otro para los impares, 
-   de acuerdo a la posicion en el strin y si el resultado de la palabra completa es par o impar...
-3. Tomar el ultimo punto en una palabra y aplicar el metodo 2.
