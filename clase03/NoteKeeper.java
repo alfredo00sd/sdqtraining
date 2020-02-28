@@ -6,46 +6,66 @@ import reto1.clase03.utils.FileManager;
 
 public class NoteKeeper {
 
-    private FileManager fileManager = new FileManager();
+    private static FileManager fileManager = new FileManager();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+ 
+    	Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Ingrese su nombre: ");
+        String name = sc.next();
+        
+        System.out.print("Ingrese sus apellidos: ");
+        String lastName = sc.next();
+        
+        System.out.print("Ingrese su edad: ");
+        byte age = sc.nextByte();
 
-        //Create the user...
-        User user = new User();
-        user.setName("Alfredo");
-        user.setLastName("Acosta Peña");
-        user.setAge((byte) 21);
-
-        //Create the note...
-        Note note = new Note(user, "Hola!");
-
-        //Escribe en el file.
-
-//        fileManager.writeFile(note);
+       User userNote = createUser(name, lastName, age);
+       
+       if(userNote != null){
+    
+    	  System.out.println("Ok, "+userNote.getName()+" write your note.");
+          String note = sc.next(); 
+          
+          //TimeUnit.MINUTES.sleep(1);
+          
+          System.in.read();
+          
+          saveNote(userNote, note);
+        
+       }else{
+    	   System.out.println("Error en creacion de usuario");	   
+       }      
     }
 
-    public void createUser(String name, String lastName, byte age){
+    public static User createUser(String name, String lastName, byte age){
 
         if(name.equals("") || lastName.equals("") || age < 0){
 
             System.out.println("Usuario invalido, favor proveer los datos correctos y completos.");
 
+            return null; 
         }else {
             User user = new User();
 
             user.setName(name);
             user.setLastName(lastName);
             user.setAge(age);
+             
+            return user;
         }
     }
 
-    public void saveNote(User user, String myNote){
+    public static void saveNote(User user, String myNote){
 
         if(user != null && !myNote.equals("")){
 
             Note note = new Note(user, myNote);
             fileManager.writeFile(note);
-
+            
+            System.out.println("Nota guardada!!");
+            
         }else {
             System.out.println("Usuario invalido o nota vacia...");
         }
