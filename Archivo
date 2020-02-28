@@ -47,7 +47,7 @@ public class Arichivo {
 			e.printStackTrace();
 		}
 	}
-	
+
 	//Say if the word is par or impar
 	private static void solve(String e){
 
