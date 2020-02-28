@@ -6,6 +6,8 @@ import reto1.clase03.utils.FileManager;
 
 public class NoteKeeper {
 
+    private FileManager fileManager = new FileManager();
+
     public static void main(String[] args) {
 
         //Create the user...
@@ -18,7 +20,34 @@ public class NoteKeeper {
         Note note = new Note(user, "Hola!");
 
         //Escribe en el file.
-        FileManager fileManager = new FileManager();
-        fileManager.writeFile(note);
+
+//        fileManager.writeFile(note);
+    }
+
+    public void createUser(String name, String lastName, byte age){
+
+        if(name.equals("") || lastName.equals("") || age < 0){
+
+            System.out.println("Usuario invalido, favor proveer los datos correctos y completos.");
+
+        }else {
+            User user = new User();
+
+            user.setName(name);
+            user.setLastName(lastName);
+            user.setAge(age);
+        }
+    }
+
+    public void saveNote(User user, String myNote){
+
+        if(user != null && !myNote.equals("")){
+
+            Note note = new Note(user, myNote);
+            fileManager.writeFile(note);
+
+        }else {
+            System.out.println("Usuario invalido o nota vacia...");
+        }
     }
 }
