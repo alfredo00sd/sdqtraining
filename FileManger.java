@@ -40,10 +40,12 @@ public class FileManger {
     }
 
     //\\//\\//\\/\//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
-    //:: Hacer un arreglo con cada amount
-    //:: imprimir promedio de un arrego
-    //:: Numero mayor y menor
-    //:: Ordenar de menor a mayor y viceversa
+    //::> Hacer un arreglo con cada amount
+    //::> imprimir promedio de un arrego
+    //::> Numero mayor y menor
+    //::> Ordenar de menor a mayor y viceversa
+    //::> suma(posciones pares) x suma(posciones impares)
+    //::> Crear un subArreglo a partir de otro
     ////\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
     public void writeFile(String content, boolean append) {
