@@ -7,10 +7,44 @@ public class FileManger {
 
     private File file = new File("fileMe.txt");
     private static final Logger LOGGER = Logger.getLogger(FileManger.class.getName());
+    char[] vowels = {'a','e','i','o','u','A','E','I','O','U'};
+    int count = 0;
 
     public FileManger(){
 
     }
+
+    public void amountOfLetters(){
+
+    }
+
+    public void amountOfNumbers(){
+
+    }
+
+    public void amountOfVowels(String text){
+
+        for (int i = 0; i< text.length(); i++){
+
+            char ch = text.charAt(i);
+
+            for(int j = 0; j < text.length(); j++){
+
+                if(ch == 'a'|| ch == 'e'|| ch == 'i' ||ch == 'o' ||ch == 'u'||ch == ' '){
+                    count ++;
+                }
+            }
+
+        }
+        System.out.println("Number of vowels is "+count);
+    }
+
+    //\\//\\//\\/\//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+    //:: Hacer un arreglo con cada amount
+    //:: imprimir promedio de un arrego
+    //:: Numero mayor y menor
+    //:: Ordenar de menor a mayor y viceversa
+    ////\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
     public void writeFile(String content, boolean append) {
 
@@ -70,4 +104,5 @@ public class FileManger {
             e.printStackTrace();
         }
     }
+
 }
